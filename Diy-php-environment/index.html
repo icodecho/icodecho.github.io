@@ -1,0 +1,519 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Diy-php-environment | 苏德尔与伪技术</title>
+  <meta name="author" content="Sudoer">
+  
+  <meta name="description" content="搭建PHP开发环境（在windows下开发需安装 apache(或者iis) +php+mysql+phpadmin[可有可无]）自己安装各个部分软件，手动配置,搭配灵活，可以根据开发需求选择不同版本软件.
+本机环境
+Windows7 x64
+
+安装目录
+apache—&amp;gt;D:\websites\apache\Apache24
+
+php—&amp;gt;D:\websites\php\php-5.5.30
+
+mysql—&amp;gt;C:\Program Files\MySQL\MySQL Server 5.6
+
+网站目录—&amp;gt;D:\websites\web-root
+
+phpmyadmin—&amp;gt;D:\websites\web-root\www-example-com\phpmyadmin
+
+
+apache安装
+版本：httpd-2.4.17-x64.zip">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Diy-php-environment"/>
+  <meta property="og:site_name" content="苏德尔与伪技术"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.ico" rel="icon">
+  
+
+  <!-- CSS -->
+
+
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">苏德尔与伪技术</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>文章归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/About" title="About me.">
+			  <i class="fa fa-info-circle"></i>关于本站
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+		<!-- content -->
+
+		<div class="slogan" style="margin-bottom: 17px">
+		  <h4 style="margin-top: 0;color: #333;font-size:15px;font-weight: normal;">
+			  当前位置&nbsp;:&nbsp;<a href="/" >首页&nbsp;</a>»&nbsp;文章分类&nbsp;:&nbsp;
+			
+		  &nbsp;</a>»&nbsp; Diy-php-environment </h4>
+		</div>
+
+		<div id="top_search"></div>
+				 
+		
+
+		<div class="archive">	  
+			<div id="archives"> 
+				
+				<header class="entry-header">
+					<div class="entry-info" text-transform : capitalize>				     					      	      
+							
+						<span class="entry-date">
+							<span class="fa fa-calendar" aria-hidden="true"></span>
+							2016-04-29						      
+						</span>
+							  
+							  
+						<span class="author vcard">
+							<span class="fa fa-user" aria-hidden="true"></span>
+							<a href="/">Sudoer</a> 	 	
+						</span>
+					
+							
+					</div>	
+
+									
+					<h3 class="entry-title"> 
+						<a href="/Diy-php-environment/" >Diy-php-environment</a>
+					</h3>		
+						
+					<span style="font-size:15px"><h5 id="搭建PHP开发环境（在windows下开发需安装-apache-或者iis-php-mysql-phpadmin-可有可无-）"><a href="#搭建PHP开发环境（在windows下开发需安装-apache-或者iis-php-mysql-phpadmin-可有可无-）" class="headerlink" title="搭建PHP开发环境（在windows下开发需安装 apache(或者iis) +php+mysql+phpadmin[可有可无]）"></a>搭建PHP开发环境（在windows下开发需安装 apache(或者iis) +php+mysql+phpadmin[可有可无]）</h5><p>自己安装各个部分软件，手动配置,搭配灵活，可以根据开发需求选择不同版本软件.</p>
+<h4 id="本机环境"><a href="#本机环境" class="headerlink" title="本机环境"></a>本机环境</h4><ul>
+<li>Windows7 x64</li>
+</ul>
+<h4 id="安装目录"><a href="#安装目录" class="headerlink" title="安装目录"></a>安装目录</h4><ul>
+<li><p>apache—&gt;D:\websites\apache\Apache24</p>
+</li>
+<li><p>php—&gt;D:\websites\php\php-5.5.30</p>
+</li>
+<li><p>mysql—&gt;C:\Program Files\MySQL\MySQL Server 5.6</p>
+</li>
+<li><p>网站目录—&gt;D:\websites\web-root</p>
+</li>
+<li><p>phpmyadmin—&gt;D:\websites\web-root\www-example-com\phpmyadmin</p>
+</li>
+</ul>
+<h4 id="apache安装"><a href="#apache安装" class="headerlink" title="apache安装"></a>apache安装</h4><ul>
+<li>版本：httpd-2.4.17-x64.zip</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p>下载地址：<a href="https://httpd.apache.org/download.cgi" target="_blank" rel="external">https://httpd.apache.org/download.cgi</a></p>
+</li>
+<li><p>解压httpd-2.4.17-x64.zip将Apache24复制到D:\websites\apache文件夹中</p>
+</li>
+<li><p>然后 运行cmd.exe（点击开始–&gt;运行–&gt;输入cmd–&gt;回车）</p>
+</li>
+<li><p>命令行下进入目录D:\websites\apache\Apache24<br>（输入D:–&gt;回车–&gt;输入cd D:\websites\apache\Apache24）</p>
+</li>
+<li><p>接着命令行下执行安装服务 httpd -k install<br>注意不执行安装服务apache这个服务是没有的<br>(可以到|计算机-管理-服务和应用程序-服务|查看apache服务)</p>
+</li>
+<li><p>接着命令下执行httpd -k start启动apache<br>可以到|计算机-管理-服务和应用程序-服务|找到apache服务通过服务启动<br>不过通过命令我们可以知道那里有错误<br>浏览器能正常访问表示启动成功</p>
+</li>
+</ul>
+<h4 id="apache进阶配置"><a href="#apache进阶配置" class="headerlink" title="apache进阶配置"></a>apache进阶配置</h4><ul>
+<li><p>修改文件D:\websites\apache\Apache24\conf\httpd.conf<br>修改Define SRVROOT “/Apache24″为Define SRVROOT “D:/websites/apache/Apache24″</p>
+</li>
+<li><p>注释掉DocumentRoot “${SRVROOT}/htdocs”</p>
+</li>
+<li><p>开启apache的虚拟主机功能Include conf/extra/httpd-vhosts.conf</p>
+</li>
+<li><p>修改D:\websites\apache\Apache24\conf\extra\httpd-vhosts.conf<br>注释原来所有 按照以下根据自己的需求修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ServerAdmin webmaster@www.example.com</span><br><span class="line">DocumentRoot &quot;D:/websites/web-root/www-example-com&quot;</span><br><span class="line">ServerName www.example.com</span><br><span class="line">ErrorLog &quot;logs/www-example-com-error.log&quot;</span><br><span class="line">CustomLog &quot;logs/www-example-com-access.log&quot; common</span><br><span class="line">    </span><br><span class="line">Options FollowSymLinks</span><br><span class="line">AllowOverride None</span><br><span class="line">Require all granted</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在hosts(C:\Windows\System32\drivers\etc\hosts)里添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1       www.example.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在目录D:/websites/web-root/www-example-com下新建一个文件index.html内容为running…</p>
+</li>
+<li><p>执行命令ipconfig /flushdns刷新dns缓存</p>
+</li>
+<li><p>执行命令httpd -k restart</p>
+</li>
+<li><p>浏览器访问www.example.com能看到running…表示配置成功</p>
+</li>
+</ul>
+<h4 id="配置apache支持php"><a href="#配置apache支持php" class="headerlink" title="配置apache支持php"></a>配置apache支持php</h4><h5 id="默认情况下apache是不支持php的"><a href="#默认情况下apache是不支持php的" class="headerlink" title="默认情况下apache是不支持php的"></a>默认情况下apache是不支持php的</h5><ul>
+<li><p>版本：php-5.5.30-Win32-VC11-x64.zip</p>
+</li>
+<li><p>下载地址：<a href="http://php.net/downloads.php" target="_blank" rel="external">http://php.net/downloads.php</a></p>
+</li>
+<li><p>解压php-5.5.30-Win32-VC11-x64.zip将php-5.5.30-Win32-VC11-x64复制到D:\websites\php\php-5.5.30<br>改名php-5.5.30-Win32-VC11-x64为php-5.5.30</p>
+</li>
+<li><p>修改D:\websites\apache\Apache24\conf\httpd.conf加入代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LoadModule php5_module &quot;D:/websites/php/php-5.5.30/php5apache2_4.dll&quot;</span><br><span class="line">PHPIniDir &quot;D:/websites/php/php-5.5.30&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在D:\websites\php\php-5.5.30文件夹下改名php.ini-development为php.ini</p>
+</li>
+<li><p>修改D:\websites\php\php-5.5.30\php.ini</p>
+<ul>
+<li><p>启用extension_dir修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extension_dir = &quot;D:/websites/php/php-5.5.30/ext&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启用date.timezone修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">date.timezone =PRC</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启用 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">extension=php_mbstring.dll</span><br><span class="line">extension=php_mysql.dll</span><br><span class="line">extension=php_mysqli.dll</span><br><span class="line">default_charset = &quot;UTF-8&quot;</span><br><span class="line">mbstring.http_input = UTF-8</span><br><span class="line">mbstring.internal_encoding = UTF-8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改D:\websites\apache\Apache24\conf\httpd.conf</p>
+<ul>
+<li><p>修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DirectoryIndex index.php index.html</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AddType application/x-httpd-php .php</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>在D:\websites\web-root\www-example-com文件新建一个文件index.php内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">phpinfo()</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启apache（执行命令httpd -k restart） 在浏览器下访问www.example.com可以看到php的配置详情即为成功</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="mysql安装"><a href="#mysql安装" class="headerlink" title="mysql安装"></a>mysql安装</h4><h5 id="这个没什么好说的-安装起来很简单"><a href="#这个没什么好说的-安装起来很简单" class="headerlink" title="这个没什么好说的 安装起来很简单"></a>这个没什么好说的 安装起来很简单</h5><ul>
+<li><p>版本：mysql-installer-community-5.6.27.0.msi</p>
+</li>
+<li><p>下载地址：<a href="https://dev.mysql.com/downloads/windows/installer/" target="_blank" rel="external">https://dev.mysql.com/downloads/windows/installer/</a></p>
+</li>
+<li><p>至于启动 好像默认是自启的</p>
+</li>
+</ul>
+<h4 id="phpmyadmin安装"><a href="#phpmyadmin安装" class="headerlink" title="phpmyadmin安装"></a>phpmyadmin安装</h4><ul>
+<li><p>版本：phpMyAdmin-4.5.0.2-all-languages.zip</p>
+</li>
+<li><p>下载地址：<a href="https://www.phpmyadmin.net/downloads/" target="_blank" rel="external">https://www.phpmyadmin.net/downloads/</a></p>
+</li>
+<li><p>解压将里面所有文件放入D:\websites\web-root\www-example-com\phpmyadmin中</p>
+</li>
+<li><p>浏览器下访问<a href="http://www.example.com/phpmyadmin/" target="_blank" rel="external">http://www.example.com/phpmyadmin/</a>  能看到phpmyadmin登录页面表示成功<br>如能登录phpmyadmin表示mysql也是正常运行的</p>
+</li>
+</ul>
+<h4 id="———————————"><a href="#———————————" class="headerlink" title="———————————-"></a>———————————-</h4><h4 id="最后说明：有些细节可能忘了，该文章是我配置好php开发环境后"><a href="#最后说明：有些细节可能忘了，该文章是我配置好php开发环境后" class="headerlink" title="最后说明：有些细节可能忘了，该文章是我配置好php开发环境后"></a>最后说明：有些细节可能忘了，该文章是我配置好php开发环境后</h4><h4 id="凭借记忆写的，有些地方详细，有些地方略过了"><a href="#凭借记忆写的，有些地方详细，有些地方略过了" class="headerlink" title="凭借记忆写的，有些地方详细，有些地方略过了"></a>凭借记忆写的，有些地方详细，有些地方略过了</h4><h4 id="本来想放几张图上去的"><a href="#本来想放几张图上去的" class="headerlink" title="本来想放几张图上去的"></a>本来想放几张图上去的</h4><h4 id="后来想想觉得没必要"><a href="#后来想想觉得没必要" class="headerlink" title="后来想想觉得没必要"></a>后来想想觉得没必要</h4><h4 id="不懂得地方可以留言"><a href="#不懂得地方可以留言" class="headerlink" title="不懂得地方可以留言"></a>不懂得地方可以留言</h4><h4 id="或者发邮件给我"><a href="#或者发邮件给我" class="headerlink" title="或者发邮件给我"></a>或者发邮件给我</h4><h4 id="———————————-1"><a href="#———————————-1" class="headerlink" title="———————————-"></a>———————————-</h4></span>
+				</header>
+
+				<!-- share -->
+				
+					
+
+					
+     <footer class="entry-meta">      
+
+	    <div class="fenlei" style="font-size:13.5px">
+			<span class="entry-categories">
+				<span class="fa fa-folder" aria-hidden="true"></span> 
+
+				
+
+			</span>
+			
+			<span class="entry-tags">        
+				<span class="fa fa-tags" aria-hidden="true"></span> 
+
+				
+					<a href="/tags/PHP/">PHP</a>&nbsp;
+				
+					<a href="/tags/Apache/">Apache</a>&nbsp;
+				
+
+			</span>
+		</div>
+
+     
+		<!-- JiaThis Button BEGIN -->
+		<div class="jiathis_style" style="float:right;">
+			<span class="jiathis_txt">分享到：</span>
+			<a class="jiathis_button_qzone">QQ空间</a>
+			<a class="jiathis_button_tsina">新浪微博</a>
+			<a class="jiathis_button_weixin">微信</a>
+			<a class="jiathis_button_copy">复制</a>
+			<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+			<a class="jiathis_counter_style"></a>
+		</div>
+		<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+		<!-- JiaThis Button END -->
+		<br>
+    </footer>
+
+
+				
+			</div>	
+		</div>	 	        
+
+		 
+				
+
+				
+				   <p class="p2">下一篇 <a href="/Google-image-in-openshift/">Google-image-in-openshift</a></p> 
+			
+		
+		<!-- comment -->
+		
+<section id="comment">
+  
+  	 <div class="ds-thread" data-thread-key="Diy-php-environment/" data-title="Diy-php-environment" data-url="http://icodecho.github.io/Diy-php-environment/"></div>  
+  
+</section>
+
+		
+	</div> <!-- col-md-9/col-md-12 -->	
+
+	
+		<div id="side_meta">
+			
+      <div class="col-md-3">
+	      <div id="sidebar">
+	      
+  <div class="form-group has-success has-feedback" id="site_search">
+    <form class="site-search-form">
+        <input type="text" id="st-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control" />
+    </form>
+  </div>  
+
+	      <style type="text/css">
+  .cls_container{height:72px;overflow:hidden;}
+  .cls_container ul{list-style-type:none;margin:0;padding:0;margin-left:0px;}
+  .cls_container ul li{height:24px;line-height:24px;float:left;display:inline;}
+</style>
+
+<div class="widget">
+	<h4 style="font-weight: bold; color: #333;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif">本站公告</h4>
+
+	<div id="myscroll" class="cls_container">
+		<ul>
+		  <li><span style="color:red"><i class="fa fa-warning"></i>欢迎访问小站！</span></li></br>
+		  <li><span style="color:red"><i class="fa fa-warning"></i>本站一切文章来源于互联网</span></li></br>
+		  <li><span style="color:red"><i class="fa fa-warning"></i>或整理或收集(转载)</span></li></br>
+		  <li><span style="color:red"><i class="fa fa-warning"></i>如果读者触犯相关法律</span></li></br>
+		  <li><span style="color:red"><i class="fa fa-warning"></i>与本站作者无关，后果自负！</span></li></br>
+		  <li><span style="color:red"><i class="fa fa-warning"></i>如果你接受该协议</span></li></br>
+		  <li><span style="color:red"><i class="fa fa-warning"></i>可以继续阅读。</span></li></br>
+		</ul>
+	</div>
+
+	<div id="showhint"></div>
+</div>
+
+<script type="text/javascript">
+	function $(element){
+	 if(arguments.length>1){
+	  for(var i=0,length=arguments.length,elements=[];i<length;i++){
+	   elements.push($(arguments[i]));
+	  }
+	  return elements;
+	 }
+	 if(typeof element=="string"){
+	  return document.getElementById(element);
+	 }else{
+	  return element;
+	 }
+	}
+	var Class={
+	 create:function(){
+	  return function(){
+	   this.initialize.apply(this,arguments);
+	  }
+	 }
+	}
+	Function.prototype.bind=function(object){
+	 var method=this;
+	 return function(){
+	  method.apply(object,arguments);
+	 }
+	}
+	var Scroll=Class.create();
+	Scroll.prototype={
+	 initialize:function(element,height){
+	  this.element=$(element);
+	  this.element.innerHTML+=this.element.innerHTML;
+	  this.height=height;
+	  this.maxHeight=this.element.scrollHeight/2;
+	  this.counter=0;
+	  this.scroll();
+	  this.timer="";
+	  this.element.onmouseover=this.stop.bind(this);
+	  this.element.onmouseout=function(){this.timer=setTimeout(this.scroll.bind(this),1000);}.bind(this);
+	 },
+	 scroll:function(){
+	  if(this.element.scrollTop<this.maxHeight){
+	   this.element.scrollTop++;
+	   this.counter++;
+	  }else{
+	   this.element.scrollTop=0;
+	   this.counter=0;
+	  }
+	  if(this.counter<this.height){
+	   this.timer=setTimeout(this.scroll.bind(this),20);
+	  }else{
+	   this.counter=0;
+	   this.timer=setTimeout(this.scroll.bind(this),3000);
+	  }
+	 },
+	 stop:function(){
+	  clearTimeout(this.timer);
+	 }
+	}
+	var myscroll=new Scroll("myscroll",24);
+</script>
+
+
+	      <!-- toc -->	      
+	      	      
+
+	      	
+	      
+	<div class="widget">
+		<h4 style="font-weight: bold; color: #333 ">标签云</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/Google/">Google<span>1</span></a></li>
+		
+			<li><a href="/tags/PHP/">PHP<span>1</span></a></li>
+		
+			<li><a href="/tags/Apache/">Apache<span>1</span></a></li>
+		
+			<li><a href="/tags/Others/">Others<span>1</span></a></li>
+		
+			<li><a href="/tags/Nginx/">Nginx<span>1</span></a></li>
+		
+		 
+		</ul>
+	</div>
+
+
+	      
+<div class="widget">
+	<h4 style="font-weight: bold; color: #333;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif">友情链接</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li style="font-size:14px"><i class="fa fa-github"></i><a href="https://github.com/icodecho" title="My Github account." target="_blank"]);">我的github</a></li>
+	
+		<li style="font-size:14px"><i class="fa fa-chain"></i><a href="http://g.evilcode.cf" title="自建谷歌镜像" target="_blank"]);">谷歌</a></li>
+	
+	</ul>
+</div>
+
+  
+	      </div> <!-- sidebar -->
+      </div> <!-- col-md-3 -->
+
+		</div>
+			
+
+</div><!-- row -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  Sudoer &copy; 2013-2016.
+  
+       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, <a href="https://swiftype.com/" target="_blank">Swiftype</a> and <a href="https://github.com/" target="_blank">Github</a>.
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+  <script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'u1Je9GfjoyDzsFFtRrNz','2.0.0');
+  </script>
+
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>
